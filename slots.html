@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parking</title>
+
+	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
+	<link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/vendors/menu/src/main.menu.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/utilities.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors-gh.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors-g.css">
+
+	<!-- CAROUSEL -->
+	<link rel="stylesheet" href="assets/vendors/owl.carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/vendors/owl.carousel/owl.theme.default.min.css">
+
+	<!-- ANIMATE -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/animate/animate.css">
+
+	<!-- ANIMATED HEADLINES -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/animated-headline/css/style.css">
+
+	<!-- FANCY BOX -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/fancybox/jquery.fancybox.min.css">
+	
+
+</head>
+<body >
+
+	<div class="main-header header-shadow cherry-header">
+		<div class="container">
+
+			<div class="main-header-container">
+
+				<div class="logo" data-mobile-logo="assets/images/logo/logo-dark.png" data-sticky-logo="assets/images/logo/logo-dark.png">
+					<a href="index.html"><img src="assets/images/logo/logo-dark.png" alt="logo"/></a>
+				</div> <!-- /LOGO -->
+
+				<div class="burger-menu">
+					<div class="line-menu"></div>
+					<div class="line-menu"></div>
+					<div class="line-menu"></div>
+				</div> <!-- /BURGER MENU -->
+
+				<nav class="main-menu menu-caret menu-hover-2 submenu-top-border submenu-scale">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="parkings.html">Parkings</a></li>
+						<li><a href="how-it-works.html">How it Works</a></li>
+						<li><a href="about-us.html">About Us</a>
+					</ul>
+				</nav> <!-- NAVIGATION MENU -->
+
+			</div> <!-- /HEADER CONTAINER -->
+
+		</div> <!-- /CONTAINER -->
+	</div> <!-- /HEADER -->
+
+
+	<!-- BREADCRUMB -->
+	<section class="bg-primary pt-s2 pb-s2 text-white">
+		<div class="container">
+				<div class="col-md-12">
+					<div class="align-self-center mb-0--lg mb-s1--md mb-s1--sm mb-s1--xs">
+							<h3 class="text-bold-400 text-center text-size-s2 m-0 text-white">Avilable Spaces</h3>
+					</div>
+				</div>
+		</div> <!-- /CONTAINER -->
+	</section> <!-- /SECTION -->
+	<!-- /BREADCRUMB -->
+	
+	<div class="container">
+		<div class="row " id="spaces">
+			<h1>"I think the server is offline please wait"</h1>
+		</div>
+	<script>
+		function showSpaces() {
+  			var xmlhttp = new XMLHttpRequest();
+    		xmlhttp.onreadystatechange = function() {
+      			if (this.readyState == 4 && this.status == 200) {
+        			document.getElementById("spaces").innerHTML = this.responseText;
+      			}
+    		};
+    		xmlhttp.open("GET","api/updater.php",true);
+    		xmlhttp.send();
+		}
+		setInterval(showSpaces, 1000);
+	</script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/vendors/appear/jquery.appear.min.js"></script>
+	<script src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/vendors/common/common.min.js"></script>
+
+	<!-- FANCY-BOX -->
+	<script src="assets/vendors/fancybox/jquery.fancybox.min.js"></script>
+
+	<!-- MENU -->
+	<script src="assets/vendors/menu/src/main.menu.js"></script>
+
+	<!-- CAROUSEL -->
+	<script src="assets/vendors/owl.carousel/owl.carousel.min.js"></script>
+
+	<!-- ANIMATED-HEADLINES -->
+	<script src="assets/vendors/animated-headline/js/animated-headline.js"></script>
+
+	<!-- THEME-CUSTOM -->
+	<script src="assets/js/main.js"></script>
+
+	<!-- THEME-INITIALIZATION-FILES -->
+	<script src="assets/js/theme.init.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

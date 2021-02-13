@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parking</title>
+
+	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
+	<link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/vendors/menu/src/main.menu.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/utilities.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors-gh.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors-g.css">
+
+	<!-- CAROUSEL -->
+	<link rel="stylesheet" href="assets/vendors/owl.carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/vendors/owl.carousel/owl.theme.default.min.css">
+
+	<!-- ANIMATE -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/animate/animate.css">
+
+	<!-- ANIMATED HEADLINES -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/animated-headline/css/style.css">
+
+	<!-- FANCY BOX -->
+	<link rel="stylesheet" type="text/css" href="assets/vendors/fancybox/jquery.fancybox.min.css">
+
+</head>
+<body>
+
+	<div class="main-header header-shadow cherry-header">
+	    
+		<div class="container">
+
+			<div class="main-header-container">
+
+				<div class="logo" data-mobile-logo="assets/images/logo/logo-dark.png" data-sticky-logo="assets/images/logo/logo-dark.png">
+					<a href="index.html"><img src="assets/images/logo/logo-dark.png" alt="logo"/></a>
+				</div> <!-- /LOGO -->
+
+				<div class="burger-menu">
+					<div class="line-menu"></div>
+					<div class="line-menu"></div>
+					<div class="line-menu"></div>
+				</div> <!-- /BURGER MENU -->
+
+				<nav class="main-menu menu-caret menu-hover-2 submenu-top-border submenu-scale">
+					<ul>
+						<li ><a href="index.html">Home</a></li>
+						<li><a href="parkings.html">Parkings</a></li>
+						<li class="current-menu"><a href="how-it-works.html">How it Works</a></li>
+						<li><a href="about-us.html">About Us</a>
+					</ul>
+				</nav> <!-- NAVIGATION MENU -->
+
+			</div> <!-- /HEADER CONTAINER -->
+
+		</div> <!-- /CONTAINER -->
+	</div> <!-- /HEADER -->
+
+	<!-- BREADCRUMB -->
+	<section class="bg-primary pt-s3 pb-s3 text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="d-lg-flex text-center">
+						<div class="align-self-center mb-0--lg mb-s1--md mb-s1--sm mb-s1--xs">
+							<h3 class="text-bold-400 text-size-s2 m-0 text-white">How it Works</h3>
+						</div>
+						<div class="ml-auto align-self-center">
+							<ol class="breadcrumb d-flex justify-content-center m-0 bg-none text-size-s1 p-0">
+								<li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+								<li class="breadcrumb-item" aria-current="page">How it Works</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div> <!-- ROW -->
+		</div> <!-- /CONTAINER -->
+	</section> <!-- /SECTION -->
+	<!-- /BREADCRUMB -->
+
+	<section class="bg-white pt-s5 pb-s5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="mb-s2">
+						<h3 class="text-bold-700 text-dark text-capitalize">Detection/Monitoring</h3>
+					</div>
+					<p>The Monitoring process is running on a RPI kit which uses the concept of Motion Detection with the help of OpenCV where it regularly monitors the Marked Parking spaces.</p>
+					<ul class="mt-s3 mb-s3">
+						<li class="mb-6">
+							<div class="d-flex align-items-center">
+								<span class="bg-primary text-white h--20 w--20 d-flex justify-content-center align-items-center text-size-8 rounded-circle mr-s2">
+									<i class="icon-arrow-right"></i>
+								</span>
+								<p class="m-0">Marking coordinates of each parking spaces</p>
+							</div>
+						</li>
+						<li class="mb-6">
+							<div class="d-flex align-items-center">
+								<span class="bg-primary text-white h--20 w--20 d-flex justify-content-center align-items-center text-size-8 rounded-circle mr-s2">
+									<i class="icon-arrow-right"></i>
+								</span>
+								<p class="m-0">Finding the Region of Intrest(ROI)</p>
+							</div>
+						</li>
+						<li class="mb-6">
+							<div class="d-flex align-items-center">
+								<span class="bg-primary text-white h--20 w--20 d-flex justify-content-center align-items-center text-size-8 rounded-circle mr-s2">
+									<i class="icon-arrow-right"></i>
+								</span>
+								<p class="m-0">Applying Laplacian on the ROI</p>
+							</div>
+						</li>
+						<li class="mb-6">
+							<div class="d-flex align-items-center">
+								<span class="bg-primary text-white h--20 w--20 d-flex justify-content-center align-items-center text-size-8 rounded-circle mr-s2">
+									<i class="icon-arrow-right"></i>
+								</span>
+								<p class="m-0">Finding the mean value from the resulted image</p>
+							</div>
+						</li>
+						<li class="mb-6">
+							<div class="d-flex align-items-center">
+								<span class="bg-primary text-white h--20 w--20 d-flex justify-content-center align-items-center text-size-8 rounded-circle mr-s2">
+									<i class="icon-arrow-right"></i>
+								</span>
+								<p class="m-0">Deciding the status as free or not</p>
+							</div>
+						</li>
+					</ul>
+					<p>These status values are then sent to the Data Store (DataBase)</p>
+					<div class="mb-s2">
+						<h3 class="text-bold-700 text-dark text-capitalize">Data Store</h3>
+					</div>
+					<p>The Data can be recieved with the help of an API which continuously updates the status for the respective parking space to the database in a remote host</p>
+					<div class="mb-s2">
+						<h3 class="text-bold-700 text-dark text-capitalize">Viewing</h3>
+					</div>
+					<p>Finally with the help of the data from the database the user can view the status of the respective parking lot's Avilable spaces in a Web Browser or an Android app that you are using right now.</p>
+				</div>
+			</div> <!-- /ROW -->
+		</div> <!-- /CONTAINER -->
+	</section> <!-- /SECTION -->
+
+	<!--
+    #################################
+        - Begin: FOOTER -
+    #################################
+    -->
+    <footer class="footer">
+        <div class="bg-dark pt-60 pb-50">
+            <div class="container">
+				<div class="row">
+					<div class="col-md-12 text-bold-400 text-size-s2 m-5 text-black text-center"><a href="index.html">Home</a></div>
+				</div>	
+				<div class="row">
+					<div class="col-md-12 text-bold-400 text-size-s2 m-5 text-black text-center"><a href="parkings.html">Parkings</a></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-bold-400 text-size-s2 m-5 text-black text-center"><a href="how-it-works.html">How it Works</a></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-bold-400 text-size-s2 m-5 text-black text-center"><a href="about-us.html">About Us</a></div>
+				</div>
+            </div>   
+		</div>   
+	</footer> 
+    <!-- End: FOOTER -
+    ################################################################## -->
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/vendors/appear/jquery.appear.min.js"></script>
+	<script src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/vendors/common/common.min.js"></script>
+
+	<!-- FANCY-BOX -->
+	<script src="assets/vendors/fancybox/jquery.fancybox.min.js"></script>
+
+	<!-- MENU -->
+	<script src="assets/vendors/menu/src/main.menu.js"></script>
+
+	<!-- CAROUSEL -->
+	<script src="assets/vendors/owl.carousel/owl.carousel.min.js"></script>
+
+	<!-- ANIMATED-HEADLINES -->
+	<script src="assets/vendors/animated-headline/js/animated-headline.js"></script>
+
+	<!-- THEME-CUSTOM -->
+	<script src="assets/js/main.js"></script>
+
+	<!-- THEME-INITIALIZATION-FILES -->
+	<script src="assets/js/theme.init.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
